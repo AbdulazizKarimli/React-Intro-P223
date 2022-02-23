@@ -1,12 +1,12 @@
 
 import React, { Component } from 'react'
 
-export  class ThirdComponent extends Component {
-  
-  
-  render() {
-      return (
-        <div>ThirdComponent</div>
-      )
-    }
+export const ThirdComponent = (props) => {
+    
+  return (
+    <div style={{display:'flex',flexDirection:'column'}}>
+      {props.count}
+      <button onClick={props.decreaseCount}>Decrease from ThirdComponent</button>
+    </div>
+  )
 }
